@@ -297,6 +297,11 @@
               We perform numerical analysis in three test scenarios: (a) Autonomous Rendezvous and Proximity Operations, (b) Quadrotor Control and (c) Free Flyer Control.
             </p>
           </div>
+
+          <div class="content has-text-centered">
+            <img src="./static/images/scenarios_rqf_FT_w_states.png"
+            height="400px" width="1200px"/>
+          </div>
         </div>
       </div>
     </div>
@@ -305,11 +310,6 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-        <div class="content has-text-centered">
-          <img src="./static/images/scenarios_rqf_FT_w_states.png"
-          height="400px" width="1200px"/>
-        </div>
-
         <div class="content has-text-justified">
           <p>
             Although the fine-tuning process of the transformer-based neural network targets explicitly closed-loop performance, it does not cause any degradation in the open-loop setting.
@@ -322,36 +322,56 @@
           <img src="./static/images/open_loop_results_qfr_FT_ylim.svg"
           height="500px" width="500px"/>
         </div>
-        <!--<div class="content has-text-centered">
-          <img src="./static/images/res2.jpg"
-          height="500px" width="500px"/>
-        </div>
-        <div class="content has-text-centered">
-          <img src="./static/images/res3.jpg"
-          height="500px" width="500px"/>
-        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<section class="section">
+  <div class="container is-max-desktop">
         <div class="content has-text-justified">
           <p>
-            Once trained, Transformers are able to replicate specific configurations of the performance parameter reliably, enabling a novel degree of control over the output of learning-based components
+            Once fine-tuned, the FT-TTO model outperforms all the comparative methods considered in the Model Predictive Control (MPC) setting.
+            Specifically, FT-TTO-MPC displays lower costs and computational times, thanks to the long-horizon guidance provided by the transformer-model.
           </p>
         </div>
 
         <div class="content has-text-centered">
-          <img src="./static/images/res4.jpg"
+          <img src="./static/images/closed_loop_cost_cross_applications.svg"
           height="500px" width="500px"/>
         </div>
         <div class="content has-text-centered">
-          <img src="./static/images/res5.jpg"
+          <img src="./static/images/closed_loop_time_cross_applications.svg"
           height="500px" width="500px"/>
-        </div>-->
-
-
-
+        </div>
       </div>
     </div>
+  </div>
+</section>
 
-      
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+    <!--/ Results. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Experimental results</h2>
+        
+          <div class="content has-text-justified">
+            <p>
+             Experimental tests on a real-world robotic platform, a Free Flyer testbed, confirm the numerical results showing that FT-TTO-MPC is able to plan an overall
+             trajectory which is closely aligned to the open-loop solution even when planning with the shortest time-horizon considered. Furthermore, the cost increment
+             with respect to the open-loop solution is limited approximately to 20%.
+            </p>
+          </div>
+
+          <div class="content has-text-centered">
+            <img src="./static/images/scenarios_rqf_FT_w_states.png"
+            height="400px" width="1200px"/>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 <!--<section class="section">
