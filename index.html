@@ -190,7 +190,7 @@
         <div class="column">
           <div class="content">
             <video poster="" id="open-loop" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/Open-loop_websiteSD.mp4"
+              <source src="./static/videos/Open-Loop3x_SD.mp4"
                       type="video/mp4">
             </video>
           </div>
@@ -198,7 +198,7 @@
         <div class="column">
           <div class="content">
             <video poster="" id="closed-loop" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/Closed-loop_websiteSD.mp4"
+              <source src="./static/videos/Closed-Loop3x_SD.mp4"
                       type="video/mp4">
             </video>
           </div>
@@ -212,51 +212,34 @@
 </section>
 
 
-<section class="section is-light">
-  <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Model predictive control (MPC) has established itself as the primary methodology for
-            constrained control, enabling general-purpose robot autonomy in diverse real-world scenarios.
-            However, for most problems of interest, MPC relies on the recursive solution of highly
-            dnon-convex trajectory optimization problems, leading to high computational complexity
-            and strong dependency on initialization.
-          </p>
-          <p>
-            In this work, we present a unified framework to combine the main strengths of
-            optimization-based and learning-based methods for MPC. Our approach entails embedding
-            high-capacity, transformer-based neural network models within the optimization process
-            for trajectory generation, whereby the transformer provides a near-optimal initial guess,
-            or target plan, to a non-convex optimization problem.
-          </p>
-          <p>
-            Our experiments, performed in simulation and the real world onboard a free-flyer platform,
-            demonstrate the capabilities of our framework to improve MPC convergence and runtime. Compared
-            to purely optimization-based approaches, results show that our approach can improve trajectory
-            generation performance by up to 70%, reduce the number of solver iterations by up to 45%,
-            and improve overall MPC runtime by 7x without loss in performance.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-    <!--/ Results. -->
+<section class="hero is-light">
+  <div class="hero-body"></div>
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-3">Numerical results</h2>
-        
+          <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              We perform numerical analysis in three test scenarios: (a) Autonomous Rendezvous and Proximity Operations, (b) Quadrotor Control and (c) Free Flyer Control.
+              Model predictive control (MPC) has established itself as the primary methodology for
+              constrained control, enabling general-purpose robot autonomy in diverse real-world scenarios.
+              However, for most problems of interest, MPC relies on the recursive solution of highly
+              dnon-convex trajectory optimization problems, leading to high computational complexity
+              and strong dependency on initialization.
+            </p>
+            <p>
+              In this work, we present a unified framework to combine the main strengths of
+              optimization-based and learning-based methods for MPC. Our approach entails embedding
+              high-capacity, transformer-based neural network models within the optimization process
+              for trajectory generation, whereby the transformer provides a near-optimal initial guess,
+              or target plan, to a non-convex optimization problem.
+            </p>
+            <p>
+              Our experiments, performed in simulation and the real world onboard a free-flyer platform,
+              demonstrate the capabilities of our framework to improve MPC convergence and runtime. Compared
+              to purely optimization-based approaches, results show that our approach can improve trajectory
+              generation performance by up to 70%, reduce the number of solver iterations by up to 45%,
+              and improve overall MPC runtime by 7x without loss in performance.
             </p>
           </div>
         </div>
@@ -265,9 +248,34 @@
   </div>
 </section>
 
+<!--<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+    
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>-->
+
 <section class="section">
   <div class="container is-max-desktop">
-
+    <!--/ Results. -->
+    <h2 class="title is-3">Numerical results</h2>
+    <div class="content has-text-justified">
+      <p>
+        We perform numerical analysis in three test scenarios:
+        <ol type="a">
+          <li><em>Autonomous Rendezvous and Proximity Operations,</em></li>
+          <li><em>Quadrotor Control,</em></li>
+          <li><em>Free Flyer Control.</em></li>
+        </ol>
+      </p>
+    </div>
+    
     <div class="content has-text-centered">
       <img src="./static/images/scenarios_rqf_FT_w_states.png"
       height="400px" width="1200px"/>
