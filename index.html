@@ -270,7 +270,7 @@
         
         <div class="content has-text-justified">
           <p>
-            We perform numerical analysis in three test scenarios:
+            The proposed framework is evaluated in three different test scenarios, inlcuding nonlinear dynamics and obstacle avoidance constraints:
           </p>
           <ol type="a">
             <li><em>Autonomous Rendezvous and Proximity Operations,</em></li>
@@ -278,34 +278,41 @@
             <li><em>Free Flyer Control.</em></li>
           </ol>
         </div>
+
+        <div class="content has-text-centered">
+          <img src="./static/images/scenarios_rqf_FT_w_states.png"
+          height="400px" width="1200px"/>
+        </div>
+    
+        <div class="content has-text-justified">
+          <p>
+            Although targeting explicitly closed-loop performance, the fine-tuning process benefits the open-loop setting, too. Warm-starting sequential optimizers with the fine-tuned
+            transformer-based neural network (FT-TTO) increases the fuel-optimality of the planned trajectory.
+          </p>
+        </div>
+    
+        <div class="content has-text-centered">
+          <img src="./static/images/open_loop_results_qfr_FT_ylim.svg"
+          height="500px" width="500px"/>
+        </div>
+
+        <div class="content has-text-justified">
+          <p>
+            In the closed-loop setting, the fine-tuning process enables FT-TTO to effectively boost MPC performance, providing a long-horizon guidance to short-horizon planning problems.
+            FT-TTO-MPC outperforms all the baselines considered, thanks to its robustness to covariance shifts induced by the closed-loop execution.
+          </p>
+        </div>
+    
+        <div class="content has-text-centered">
+          <img src="./static/images/closed_loop_cost_cross_applications_fdr.svg"
+          height="500px" width="500px"/>
+        </div>
+        <div class="content has-text-centered">
+          <img src="./static/images/closed_loop_time_cross_applications_fdr.svg"
+          height="500px" width="500px"/>
+        </div>
       </div>
-    </div>
-    
-    <div class="content has-text-centered">
-      <img src="./static/images/scenarios_rqf_FT_w_states.png"
-      height="400px" width="1200px"/>
-    </div>
-
-    <div class="content has-text-justified">
-      <p>
-        Although the fine-tuning process of the transformer-based neural network targets explicitly closed-loop performance, it does not cause any degradation in the open-loop setting.
-        On the contrary, open-loop results in different test scenarios shows how warm-starting with the fine-tuned model (FT-TTO) increases the suboptimality improvement with respect
-        to warm-starting methods based on problem relaxations.
-      </p>
-    </div>
-
-    <div class="content has-text-centered">
-      <img src="./static/images/open_loop_results_qfr_FT_ylim.svg"
-      height="500px" width="500px"/>
-    </div>
-    
-  </div>
-</section>
-
-<section class="section">
-  <div class="container is-max-desktop">
-        
-    </div>
+    </div>    
   </div>
 </section>
 
@@ -319,28 +326,13 @@
         
           <div class="content has-text-justified">
             <p>
-             Experimental tests on a real-world robotic platform, a Free Flyer testbed, confirm the numerical results showing that FT-TTO-MPC is able to plan an overall
-             trajectory which is closely aligned to the open-loop solution even when planning with the shortest time-horizon considered. Furthermore, the cost increment
-             with respect to the open-loop solution is limited approximately to 20%.
+             Experimental tests on a real-world robotic platform, a Free Flyer testbed, confirm the numerical results. Even when planning with the shortest time-horizon considered,
+             FT-TTO-MPC is able to plan an overall trajectory which is closely aligned to the open-loop solution, limiting the cost increment due to the short-horizon planning approximately to 20%.
             </p>
           </div>
-
           <div class="content has-text-centered">
-            <p>
-              In the open-loop experiments, the full-horizon trajectory is planned warm-starting thr SCP problem with FT-TTO and REL, then it is executed through a PID controller.
-            </p>
-            <video poster="" id="open-loop" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/Open-loop_websiteSD.mp4"
-                      type="video/mp4">
-            </video>
-
-            <p>
-              In the closed-loop experiments, the FT-TTO-MPC and REL-MPC are employed to directly control the free flyer in the receding-horizon control scheme.
-            </p>
-            <video poster="" id="closed-loop" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/Closed-loop_websiteSD.mp4"
-                      type="video/mp4">
-            </video>
+            <img src="./static/images/exp_tests_qualitative_results.png"
+            height="500px" width="500px"/>
           </div>
         </div>
       </div>
