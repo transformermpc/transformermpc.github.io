@@ -4,11 +4,15 @@ This is the repository that contains source code for the [website](https://trans
 
 If you find Transformer-based MPC useful for your work please cite:
 ```
- @article{ID
-  author    = {authors},
-  title     = {title},
-  journal   = {journal},
-  year      = {year},
+@article{transformermpc2024,
+  author    = {Celestini, Davide and Gammelli, Daniele and Guffanti, Tommaso and D'Amico, Simone and Capello, Elisa and Pavone, Marco},
+  journal   = {IEEE Robotics and Automation Letters},
+  title     = {Transformer-Based Model Predictive Control: Trajectory Optimization via Sequence Modeling},
+  year      = {2024},
+  volume    = {9},
+  number    = {11},
+  pages     = {9820-9827},
+  doi       = {10.1109/LRA.2024.3466069}
 }
 ```
 
